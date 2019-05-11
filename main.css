@@ -1,0 +1,269 @@
+
+html, body {
+  background: black;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.disclaimer{
+
+	color: red;
+	text-align: center;
+	
+}
+.logo{
+    
+   
+      
+	
+    }
+ .navtext{
+
+ 	    font-size: 40px;
+    	color:  #FCC201
+    
+        
+    }
+    nav {
+       
+    	display: inline;
+    
+    	
+    	
+    }
+    .sticky{
+
+
+    	    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+    background-color: black;
+
+    }
+    .ul1{display: inline;
+    	
+
+    }
+    .li1{
+        font-size: 30px;
+    	float: right;
+    	color:#FCC201;
+    	padding: 20px;
+    	list-style: none;
+    	display: inline;
+
+
+      
+    
+       
+     }
+     .
+      
+
+     }
+
+     .homebg{
+     	
+     }
+     
+     .aboutusbg{
+
+         background-image: url(https://busites_www.s3.amazonaws.com/acdccom/content/galleries/f3410e8fb16d.jpg);
+            
+            background-size: 2600px;
+        background-repeat: no-repeat;
+     
+     }
+     .goldhd{
+     	text-align:center;
+     	font-size: 65px;
+     	color:#FCC201 ;
+     	
+     	
+     }
+     .tableimg{
+           width: 300px;
+         
+            border: 7px solid #FCC201 ;
+            
+     }
+
+     th{
+
+     	padding: 30px;
+     	
+     
+     	
+     }
+     table{
+
+     	margin-left: 8%;
+     	
+
+     }
+
+     .tableletters{
+
+     	color: #FCC201;
+     	font-size: 40px;
+        
+     }
+     #slider {
+    width: 1440px;
+    height: 800px;
+    overflow: hidden;
+    margin-left: 13%;
+   
+    
+}
+
+#slider .slides {
+    display: block;
+    width: 12000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 1440px;
+    height: 800px;
+
+}
+
+/* helper css, since we don't have images */
+.slide1 {background-image: url(https://i.ytimg.com/vi/K1c8KhYfaJE/maxresdefault.jpg);
+background-size: 1440px;
+background-repeat: no-repeat;
+
+}
+/*.slide2 {background-image: url(https://i.pinimg.com/originals/83/50/c8/8350c8e2368d145f86ae8dc48ae2a0b6.jpg);
+ background-repeat: no-repeat;
+ background-size: 1440px;
+}*/
+.slide3 {background-image: url(http://conversationsabouther.net/wp-content/uploads/2015/02/acdc1.jpg);
+ background-repeat: no-repeat;
+ background-size: 1440px;
+}
+.slide4 {background-image: url(https://www.hdwallpaper.nu/wp-content/uploads/2018/02/acdc-1.jpg);
+      background-repeat: no-repeat;
+      background-size: 1440px;
+ }
+/*.slide5 {background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFTNvZjn7faLmGppSHDSODarqGfJ71djFZkyEaBmi53GBNolAnqw);
+   background-repeat: no-repeat;
+   background-size: 1440px;
+}*/
+.navbgc{
+	background-color: 	#483C32;
+}
+.logopd{
+	margin-left: 3%;
+}
+    #galleryslider{
+
+     width: 633px;
+    height: 500px;
+    overflow: hidden;
+    
+    }
+    #galleryslider .galleryslides {
+   
+    display: block;
+    width: 6000px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+#galleryslider .galleryslide {
+   
+    float: left;
+    list-style-type: none;
+    width: 633px;
+    height: 500px;
+
+}
+.galleryslide1{ background-image: url(https://busites_www.s3.amazonaws.com/acdccom/content/articles/dsc_0256ac-dc.jpg);}
+.galleryslide2{background-image: url(https://resources.stuff.co.nz/content/dam/images/1/8/0/3/6/t/image.related.StuffLandscapeSixteenByNine.710x400.1803kn.png/1447190336492.jpg);}
+.galleryslide3{background-image: url(https://www.rollingstone.com/wp-content/uploads/2018/06/rs-8180-20121115-acdc-624x420-1353001299.jpg?crop=900:600&width=440);}
+
+.gallery{display: inline-flex;}
+
+
+#galleryslider11{
+
+     width: 633px;
+    height: 500px;
+    overflow: hidden;
+    
+
+
+
+    }
+    #galleryslider11 .galleryslides11 {
+   
+    display: block;
+    width: 6000px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+#galleryslider11 .galleryslide11 {
+    
+    float: left;
+    list-style-type: none;
+    width: 633px;
+    height: 500px;
+}
+#galleryslider21{
+ 
+     width: 633px;
+    height: 500px;
+    overflow: hidden;
+    
+
+
+
+    }
+    #galleryslider21 .galleryslides21 {
+   
+    display: block;
+    width: 6000px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+#galleryslider21 .galleryslide21 {
+      
+    float: left;
+
+    list-style-type: none;
+    width: 633px;
+    height: 500px;}
+    a{
+    	text-decoration: none;
+    }
+   .h111{
+   	text-align: center;
+   	color: #FCC201;
+    font-size: 30px;      
+      }
+      .footerimg{
+
+      	background-image: url(https://happymetalgeek.com/wp-content/uploads/2018/07/ACDC-Diamond-Rock-Club-feature.jpg); 
+      	height: 850px;  }
+
+a:hover{
+	background-color: #242124;
+;
+}
+
