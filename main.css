@@ -266,4 +266,15 @@ a:hover{
 	background-color: #242124;
 ;
 }
+::-webkit-scrollbar{
+	width: 15px;
+	background-color: #242124;;
+}
+
+::-webkit-scrollbar-thumb{
+
+     border-radius: 10px;
+     background-color:  #FCC201;
+
+}
 
