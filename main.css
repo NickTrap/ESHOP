@@ -278,3 +278,23 @@ a:hover{
 
 }
 
+.shopp{
+background-color: #202020;
+margin-left:  20%;
+margin-right: 20%;
+padding-top: 150px;
+
+font-size: 200px;
+
+
+
+}
+.shopimg{
+
+width: 250px;
+height: 250px;
+
+
+}
+.tablepad{padding-left: 200px;}
+.tablepad2{padding-left: 120px;}
