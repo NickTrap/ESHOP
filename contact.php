@@ -1,5 +1,13 @@
 <?php
  
+
+$servername = "localhost";
+$username = "id9579470_acdc1";
+$password = "acdc12345";
+$dbname = "id9579470_acdc";
+
+
+
 if($_POST) {
     $visitor_name = "";
     $visitor_email = "";
