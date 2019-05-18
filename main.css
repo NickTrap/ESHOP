@@ -258,13 +258,14 @@ background-repeat: no-repeat;
     font-size: 30px;      
       }
       .footerimg{
-       background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png);
+               margin-left: 30%;
+              color: red;
               border-radius: 10px;
               width: 800px;
               height: 400px;
             }
       .elem-group{
-                text-align: left;
+                text-align: center;
                 font-size: 40px;
               } 
        .elem-group1{
