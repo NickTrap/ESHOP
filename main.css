@@ -169,7 +169,7 @@ background-repeat: no-repeat;
     #galleryslider{
 
      width: 633px;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
     
     }
@@ -177,7 +177,7 @@ background-repeat: no-repeat;
    
     display: block;
     width: 6000px;
-    height: 500px;
+    height: 400px;
     margin: 0;
     padding: 0;
 }
@@ -187,7 +187,7 @@ background-repeat: no-repeat;
     float: left;
     list-style-type: none;
     width: 633px;
-    height: 500px;
+    height: 400px;
 
 }
 .galleryslide1{ background-image: url(https://busites_www.s3.amazonaws.com/acdccom/content/articles/dsc_0256ac-dc.jpg);}
@@ -200,7 +200,7 @@ background-repeat: no-repeat;
 #galleryslider11{
 
      width: 633px;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
     
 
@@ -211,7 +211,7 @@ background-repeat: no-repeat;
    
     display: block;
     width: 6000px;
-    height: 500px;
+    height: 400px;
     margin: 0;
     padding: 0;
 }
@@ -221,12 +221,12 @@ background-repeat: no-repeat;
     float: left;
     list-style-type: none;
     width: 633px;
-    height: 500px;
+    height: 400px;
 }
 #galleryslider21{
  
      width: 633px;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
     
 
@@ -237,7 +237,7 @@ background-repeat: no-repeat;
    
     display: block;
     width: 6000px;
-    height: 500px;
+    height: 400px;
     margin: 0;
     padding: 0;
 }
@@ -258,9 +258,27 @@ background-repeat: no-repeat;
     font-size: 30px;      
       }
       .footerimg{
+       background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2000px-Solid_white.svg.png);
+              border-radius: 10px;
+              width: 800px;
+              height: 400px;
+            }
+      .elem-group{
+                text-align: left;
+                font-size: 40px;
+              } 
+       .elem-group1{
+        text-align: center;
+        font-size: 40px;
+       }  
+       .elem-group2{
+        text-align: center;
+        font-size: 20px;
+    }
 
-      	background-image: url(https://happymetalgeek.com/wp-content/uploads/2018/07/ACDC-Diamond-Rock-Club-feature.jpg); 
-      	height: 850px;  }
+       
+
+      
 
 a:hover{
 	background-color: #242124;

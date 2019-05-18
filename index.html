@@ -160,8 +160,33 @@
   <br>
    
 <div class="footerimg">
-	<
+	<form action="contact.php" method="post">
+  <div class="elem-group1">
+    <label>Επικοινωνήστε μαζί μας</label>
+  </div>
+  <div class="elem-group">
+    <label for="name">Ονοματεπώνυμο</label>
+    <input type="text" id="name" name="visitor_name" placeholder="" pattern=[A-Z\sa-z]{3,20} required,>
+  </div>
+  <div class="elem-group">
+    <label for="email">Το e-mail σας</label>
+    <input type="email" id="email" name="visitor_email" placeholder="" required>
+  </div>
+  <div class="elem-group">
+    <label for="title">Λόγος που επικοινωνείτε μαζί μας</label>
+    <input type="text" id="title" name="email_title" required placeholder="" pattern=[A-Za-z0-9\s]{8,60}>
+  </div>
+  <div class="elem-group">
+    <label for="message">Γράψτε το μύνημά σας</label>
+    <textarea id="message" name="visitor_message" placeholder="" required></textarea>
+  </div>
+  <div class="elem-group2">
+  <button type="submit">Αποστολή</button>
+  </div>
+
+</form>
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
