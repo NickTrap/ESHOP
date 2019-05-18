@@ -1,4 +1,5 @@
- <?php 
+<?php 
+
 
 
 $servername = "localhost";
@@ -17,7 +18,7 @@ if ($conn->connect_error) {
 
 
  session_start();  
- $connect = mysqli_connect("localhost", "root", "", "acdc");  
+ $connect = mysqli_connect("localhost", "manager", "", "products");  
  if(isset($_POST["add_to_cart"]))  
  {  
       if(isset($_SESSION["shopping_cart"]))  
@@ -27,7 +28,8 @@ if ($conn->connect_error) {
            {  
                 $count = count($_SESSION["shopping_cart"]);  
                 $item_array = array(  
-                     'item_id'               =>     $_GET["id"],  
+                     'item_id'               =>     $_GET["id"],
+					           'product_img'           =>      $POST ["hidden_image"],
                      'item_name'               =>     $_POST["hidden_name"],  
                      'item_price'          =>     $_POST["hidden_price"],  
                      'item_quantity'          =>     $_POST["quantity"]  
@@ -43,7 +45,8 @@ if ($conn->connect_error) {
       else  
       {  
            $item_array = array(  
-                'item_id'               =>     $_GET["id"],  
+                'item_id'               =>     $_GET["id"],
+				        'product_img'           =>      $POST ["hidden_image"],
                 'item_name'               =>     $_POST["hidden_name"],  
                 'item_price'          =>     $_POST["hidden_price"],  
                 'item_quantity'          =>     $_POST["quantity"]  
@@ -65,12 +68,16 @@ if ($conn->connect_error) {
                 }  
            }  
       }  
- }  
- ?>  
+ } 
+ ?> 
+ 
+ 
+
+ 
  <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>Webslesson Tutorial | Simple PHP Mysql Shopping Cart</title>  
+           <title>Shopping Cart</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
@@ -78,14 +85,14 @@ if ($conn->connect_error) {
       <body>  
            <br />  
            <div class="container" style="width:700px;">  
-                <h3 align="center">Simple PHP Mysql Shopping Cart</h3><br />  
+                <h3 align="center">Shopping Cart</h3><br />  
                 <?php  
-                $query = "SELECT * FROM tbl_product ORDER BY id ASC";  
+                $query = "SELECT * FROM products ORDER BY id ASC";  
                 $result = mysqli_query($connect, $query);  
                 if(mysqli_num_rows($result) > 0)  
                 {  
                      while($row = mysqli_fetch_array($result))  
-                     {  
+                {  
                 ?>  
                 <div class="col-md-4">  
                      <form method="post" action="index1.php?action=add&id=<?php echo $row["id"]; ?>">  
@@ -94,7 +101,8 @@ if ($conn->connect_error) {
                                <h4 class="text-info"><?php echo $row["name"]; ?></h4>  
                                <h4 class="text-danger">$ <?php echo $row["price"]; ?></h4>  
                                <input type="text" name="quantity" class="form-control" value="1" />  
-                               <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />  
+                               <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+							                 <input type="hidden" name="hidden_imgage" value="<?php echo $row["image"]; ?>" />  							   
                                <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />  
                                <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
                           </div>  
@@ -110,7 +118,8 @@ if ($conn->connect_error) {
                 <div class="table-responsive">  
                      <table class="table table-bordered">  
                           <tr>  
-                               <th width="40%">Item Name</th>  
+                               <th>Product Image</th>
+							                 <th width="40%">Item Name</th>  
                                <th width="10%">Quantity</th>  
                                <th width="20%">Price</th>  
                                <th width="15%">Total</th>  
@@ -124,13 +133,15 @@ if ($conn->connect_error) {
                                {  
                           ?>  
                           <tr>  
+							                 <td><img src="image/<?php echo $values["product_img"]; ?>" class="img-responsive" style="width: 100px;"></td>  
                                <td><?php echo $values["item_name"]; ?></td>  
                                <td><?php echo $values["item_quantity"]; ?></td>  
                                <td>$ <?php echo $values["item_price"]; ?></td>  
                                <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>  
                                <td><a href="index1.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>  
                           </tr>  
-                          <?php  
+                          <?php 
+							//total amount calculate
                                     $total = $total + ($values["item_quantity"] * $values["item_price"]);  
                                }  
                           ?>  
