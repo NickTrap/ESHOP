@@ -49,6 +49,21 @@
             }
         }
     }
+    
+    
+    if (isset($_GET["action"])){
+        if ($_GET["action"] == "buy"){
+            foreach ($_SESSION["cart"] as $keys => $value){
+                if ($value["product_id"] == $_GET["id"]){
+                    unset($_SESSION["cart"][$keys]);
+                    echo '<script>alert("Υour purchase has been successfully ...!")</script>';
+                    echo '<script>window.location="Cart.php"</script>';
+                }
+            }
+        }
+    }
+    
+    
 ?>
 
 <!doctype html>
@@ -136,12 +151,13 @@
                             <div class="product">
                                 <img src="<?php echo $row["image"]; ?>" class="img-responsive">
                                 <h5 class="text-info"><?php echo $row["pname"]; ?></h5>
-                                <h5 class="text-danger"><?php echo $row["price"]; ?></h5>
+                                <h5 class="text-danger">$<?php echo $row["price"]; ?></h5>
                                 <input type="text" name="quantity" class="form-control" value="1">
                                 <input type="hidden" name="hidden_name" value="<?php echo $row["pname"]; ?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
                                 <input type="submit" name="add" style="margin-top: 5px;" class="btn btn-success"
                                        value="Add to Cart">
+                                     
                             </div>
                         </form>
                     </div>
@@ -175,6 +191,8 @@
                                 $ <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?></td>
                             <td><a href="Cart.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span
                                         class="text-danger">Remove Item</span></a></td>
+                                        
+                                     
 
                         </tr>
                         <?php
@@ -183,8 +201,16 @@
                         ?>
                         <tr>
                             <td colspan="3" align="right">Total</td>
-                            <th align="right">$ <?php echo number_format($total, 2); ?></th>
+                            <th align="right">$ <?php echo number_format($total, 2); ?> </th>
+                            
+                            
+                            <td>
+                                <a href="Cart.php?action=buy&id=<?php echo $value["product_id"]; ?>"><input type="submit" name="buy" class="btn btn-success" value="Buy"></a>
+                            </td>
+                                        
                             <td></td>
+                            
+                            
                         </tr>
                         <?php
                     }
